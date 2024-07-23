@@ -389,8 +389,7 @@ nav .social-icons {
   align-items: center;
   gap: 3rem;
   width: 100%;
-  border: 2px solid black;
-  padding: 6rem;
+  padding: 2rem;
 }
 
 .cta-content h1 {
@@ -466,7 +465,7 @@ nav .social-icons {
 .contact-content .location-card {
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  width: 80vw;
   height: 90vh;
   border-radius: 1rem;
   overflow: hidden;
@@ -628,6 +627,11 @@ footer p {
 
   .text-box p span {
     font-size: 1.7rem;
+  }
+
+  /*cta*/
+  .cta .cta-content {
+    padding: 6rem;
   }
 
   /*contact*/
