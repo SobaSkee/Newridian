@@ -379,7 +379,6 @@ nav .social-icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 4rem 0 0rem 0; */
   background-color: var(--dark-blue);
 }
 
@@ -613,12 +612,14 @@ footer p {
   /*info*/
   .info-content .text-box {
     width: 80%;
+    border-radius: 1rem;
   }
 
   .info-content .text-box::before {
     left: 8rem;
     right: 8rem;
     font-size: 1.8rem;
+    border-radius: 1rem;
   }
 
   .text-box p {
