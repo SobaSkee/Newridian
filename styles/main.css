@@ -553,20 +553,27 @@ footer p {
 /*#endregion footer styles*/
 
 /*#region media queries*/
-@media (min-width: 800px) {
+@media (min-width: 650px) {
 
+  .about .video-container {
+    width: 30rem;
+    height: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 800px) {
   /*root*/
   :root {
     /*font-sizes*/
     --fs-sm: 0.8rem;
     --fs-reg: 1rem;
     --fs-lg: 1.5rem;
-
   
     --fs-heading: 3rem;
     --fs-subheading: 2.5rem;
   }
-
 
   /*nav*/
   .mobile-nav .sidebar {
@@ -648,5 +655,12 @@ footer p {
 
 }
 
-
+@media (min-width: 1000px) {
+  .about .video-container {
+    width: 50rem;
+    height: 30rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
 /*#endregion media queries*/
