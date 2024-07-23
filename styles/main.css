@@ -343,7 +343,7 @@ nav .social-icons {
   background: rgba(10, 26, 52, 0.9);
   width: 100%;
   font-size: 1rem;
-  padding: 4rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -620,6 +620,7 @@ footer p {
   .info-content .text-box {
     width: 80%;
     border-radius: 1rem;
+    padding: 6rem;
   }
 
   .info-content .text-box::before {
