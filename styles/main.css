@@ -12,7 +12,7 @@
   --fs-subheading: 2rem;
 
   /*colors*/
-  --orange-clr: #EF9539;
+  --orange-clr: rgb(239, 149, 57);
   --dark-blue: rgb(10, 26, 52);
   --light-blue: rgb(22, 44, 81);
 
@@ -69,6 +69,7 @@ nav .mobile-nav {
   position: absolute;
   left: 2rem;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 
 .mobile-nav .sidebar {
@@ -188,6 +189,12 @@ nav .social-icons {
   border-radius: 0.5rem;
   width: 60%;
   align-self: center;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.home-content .cta-button:hover {
+  background-color: rgba(239, 149, 57, 0.85);
 }
 
 /*#endregion home styles*/
@@ -421,6 +428,12 @@ nav .social-icons {
   border-radius: 0.5rem;
   font-weight: 600;
   font-size: var(--fs-reg);
+  transition: opacity 200ms ease;
+  cursor: pointer;
+}
+
+.cta-content .buttons button:hover {
+  opacity: 85%;
 }
 
 .buttons .conference-button {
@@ -511,6 +524,12 @@ nav .social-icons {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  cursor: pointer;
+  transition: opacity 200ms ease;
+}
+
+.call-button:hover {
+  opacity: 85%;
 }
 
 .call-button p {

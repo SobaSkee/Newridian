@@ -1,11 +1,12 @@
 const sidebar = document.querySelector('.mobile-nav .sidebar');
-const openIcon = document.querySelector('.mobile-nav #open-icon')
+const openIcon = document.querySelector('.mobile-nav #open-icon');
 function closeNav() {
   sidebar.style.display = "none";
 }
 
 function openNav() {
   sidebar.style.display = "flex";
+
 }
 
 function changeColor() {
