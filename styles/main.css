@@ -31,6 +31,10 @@ section {
   /* border: 5px solid black; */
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* for backgrounds*/
 /* background: [background-color] [background-image] [background-position] [background-size] [background-repeat] [background-origin] [background-clip] [background-attachment];
 */
@@ -46,10 +50,11 @@ nav {
   z-index: 500;
   position: fixed;
   top: 0;
-  padding: 3rem;
+  padding: 2rem;
   background-color: rgb(255, 255, 255);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.5);
 }
 
 nav .mobile-nav {
@@ -76,10 +81,10 @@ nav .mobile-nav {
 .mobile-nav .overlay {
   display: none;
   position: fixed;
-  top: 6rem;
+  top: 5rem;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 6rem);
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
@@ -87,10 +92,10 @@ nav .mobile-nav {
 .mobile-nav .sidebar {
   background-color: rgb(255, 255, 255);
   position: absolute;
-  top: 6rem;
+  top: 5rem;
   left: 0;
-  height: calc(100vh - 6rem);
-  width: 100vw;
+  height: 100vh;
+  width: 100%;
   z-index: 1000;
   display: none;
   flex-direction: column;
@@ -115,11 +120,11 @@ nav .mobile-nav {
 }
 
 .sidebar #social-icons-li {
-  margin-top: auto;
+  margin-top: 2rem;
   background-color: rgba(56, 53, 53, 0.2);
   /* padding: 1rem 2rem 1rem 2rem; */
   width: 100%;
-  padding: 2rem;
+
 }
 
 #social-icons-li .social-icons a{
@@ -182,7 +187,7 @@ nav .social-icons {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 2rem;
+  padding-top: 5rem;
 }
 
 .home .home-content {
@@ -317,7 +322,7 @@ nav .social-icons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   background-color:var(--light-blue);
   gap: 2rem;
   height: 100%;
