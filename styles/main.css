@@ -76,10 +76,10 @@ nav .mobile-nav {
 .mobile-nav .overlay {
   display: none;
   position: fixed;
-  top: 0;
+  top: 6rem;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 6rem);
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
