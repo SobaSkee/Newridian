@@ -57,6 +57,7 @@ nav .mobile-nav {
   align-items: center;
   justify-content: center;
   width: 100%;
+  z-index: 1100;
 }
 
 .mobile-nav .nav-logo {
@@ -72,17 +73,29 @@ nav .mobile-nav {
   cursor: pointer;
 }
 
+.mobile-nav .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
 .mobile-nav .sidebar {
   background-color: rgb(255, 255, 255);
   position: absolute;
   top: 6rem;
   left: 0;
-  height: 100vh;
+  height: calc(100vh - 6rem);
   width: 100vw;
   z-index: 1000;
   display: none;
   flex-direction: column;
   list-style: none;
+
 }
 
 .sidebar .nav-item {
@@ -91,16 +104,23 @@ nav .mobile-nav {
   padding: 2rem 3rem 2rem 3rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
+  /* justify-content: space-between; */
+  gap: 2rem;
+  
 }
 
-.sidebar .nav-item:hover {
+.sidebar .nav-item:not(.sidebar > :last-child):hover {
   background-color: rgba(56, 53, 53, 0.2);
 }
 
 .sidebar button {
   background-color: none;
+}
+
+.sidebar #social-icons-li {
+  margin-top: auto;
+  background-color: rgba(56, 53, 53, 0.2);
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 .nav-item a {
@@ -387,7 +407,7 @@ nav .social-icons {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  width: 70%;
+  width: 100%;
   padding: 2rem;
 }
 
@@ -464,7 +484,7 @@ nav .social-icons {
 .contact-content .location-card {
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  width: 90vw;
   height: 90vh;
   border-radius: 1rem;
   overflow: hidden;
@@ -554,12 +574,27 @@ footer p {
 
 /*#region media queries*/
 @media (min-width: 650px) {
+  /*nav*/
+  .mobile-nav .sidebar {
+    width: 50vw;
+  }
 
+  /*about*/
   .about .video-container {
     width: 30rem;
     height: 20rem;
     border-radius: 1rem;
     overflow: hidden;
+  }
+
+  /*cta*/
+  .cta .cta-content {
+    width: 70%;
+  }
+
+  /*contact*/
+  .contact-content .location-card {
+    width: 70vw;
   }
 }
 
