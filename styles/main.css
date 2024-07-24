@@ -107,8 +107,8 @@ nav .mobile-nav {
   width: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-  padding-left: 2rem;
+  justify-content: center;
+  /* padding-left: 2rem; */
 }
 
 .sidebar .nav-item:not(.sidebar > :last-child):hover {
@@ -122,7 +122,6 @@ nav .mobile-nav {
 .sidebar #social-icons-li {
   margin-top: 2rem;
   background-color: rgba(56, 53, 53, 0.2);
-  /* padding: 1rem 2rem 1rem 2rem; */
   width: 100%;
 
 }
@@ -138,6 +137,7 @@ nav .mobile-nav {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 1rem;
   gap: 1rem;
