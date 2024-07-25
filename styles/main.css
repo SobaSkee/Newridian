@@ -630,6 +630,10 @@ footer p {
     display: none;
   }
 
+  body.no-scroll {
+    overflow: auto;
+  }
+
   nav .desktop-nav {
     display: flex;
   }
