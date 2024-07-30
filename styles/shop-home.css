@@ -4,6 +4,7 @@
   /*font-sizes*/
   --fs-sm: 0.8rem;
   --fs-reg: 1rem;
+  --fs-med: 1.25rem;
   --fs-lg: 1.5rem;
 
   --fs-heading: 2.5rem;
@@ -25,6 +26,11 @@
   color: var(--dark-blue);
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  /* scroll-padding: 0 10px; */
+}
+
 section {
   min-height: 100vh;
 }
@@ -32,12 +38,14 @@ section {
 body.no-scroll {
   overflow: hidden;
 }
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--dark-blue);
 }
+
 /*#endregion default styles*/
 
 /*#region navbar styles*/
@@ -160,12 +168,32 @@ nav .social-icons {
 
 /*#endregion navbar styles*/
 
-body .page-title {
-  margin: 6rem 0 2rem 0;
+/*#region header styles*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header .page-title {
   color: var(--orange-clr);
   padding: 2rem;
   font-size: var(--fs-heading);
 }
+
+.header .h2-wrapper {
+  background-color: var(--orange-clr);
+  width: 100vw;
+  margin-top: 4rem;
+  padding: 2rem 0 2rem 3rem;
+}
+
+.h2-wrapper h2 {
+  color: white;
+  text-align: center;
+  font-size: var(--fs-subheading);
+}
+/*#endregion header styles*/
 
 /*#region title styles*/
 .title {
@@ -214,9 +242,9 @@ body .page-title {
   gap: 2rem;
 }
 
-.content-wrapper h1 {
+.content-wrapper p {
   color: white;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-reg);
   text-align: center;
 }
 
@@ -229,23 +257,90 @@ body .page-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  max-width: 20rem;
   border-radius: 0.5rem;
+  text-align: center;
 }
 
 /*#endregion title styles*/
 
-body h2 {
-  color: white;
-  margin: 4rem 0rem 4rem 0;
+/*#region slide styles*/
+#slide-1 {
+  background-image: url(../assets/shop-assets/slide-1-hardhat.jpg);
 }
 
-/*#region slide1 styles*/
-.slide-1 {
-  background-image: url(../assets/shop-assets/slide-1-hardhat.jpg);
+#slide-2 {
+  background-image: url(../assets/shop-assets/slide-2-ppe-vest.webp);
+}
+
+#slide-3 {
+  background-image: url(../assets/shop-assets/slide-3-gloves.jpg);
+}
+
+#slide-4 {
+  background-image: url(../assets/shop-assets/slide-4-construction-safety-glasses.jpg);
+}
+
+.slide {
   background-size: cover;
+  background-repeat: no-repeat;
   color: white;
-  background-position: center;
+  background-position: center center;
+  width: 100vw;
+  position: relative;
+}
+
+.slide .slide-title {
+  padding: 2rem;
+  background-color: rgba(15, 15, 15, 0.7);
+  max-width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-title p {
+  color: var(--orange-clr);
+  font-weight: 600;
+  font-size: var(--fs-heading);
+}
+
+.slide .slide-desc {
+  background-color: rgba(15, 15, 15, 0.7);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+.slide-desc h1 {
+  color: var(--orange-clr);
+  font-size: var(--fs-heading);
+}
+
+.slide-desc p {
+  color: white;
+  font-size: var(--fs-med);
+}
+
+.slide-desc a {
+  background-color: var(--orange-clr);
+  color: white;
+  font-weight: 600;
+  font-size: var(--fs-lg);
+  text-decoration: none;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  border-radius: 0.5rem;
+  text-align: center;
 }
 
 /*#endregion slide1 styles*/
@@ -261,6 +356,11 @@ body h2 {
   .title {
     flex-direction: row;
     max-width: 64rem;
+  }
+
+  /*slides*/
+  .slide .slide-desc {
+    max-width: 40.5rem;
   }
 }
 @media (min-width: 62.5rem) {
