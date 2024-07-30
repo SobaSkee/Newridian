@@ -1,6 +1,4 @@
-
 /*#region default styles*/
-
 
 :root {
   /*font-sizes*/
@@ -15,10 +13,11 @@
   --orange-clr: rgb(239, 149, 57);
   --dark-blue: rgb(10, 26, 52);
   --light-blue: rgb(22, 44, 81);
-
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -67,7 +66,7 @@ nav .mobile-nav {
 }
 
 .mobile-nav .nav-logo {
-  width: 35%;
+  width: 10rem;
 }
 
 .mobile-nav #open-icon {
@@ -124,10 +123,9 @@ nav .mobile-nav {
   margin-top: 2rem;
   background-color: rgba(56, 53, 53, 0.2);
   width: 100%;
-
 }
 
-#social-icons-li .social-icons a{
+#social-icons-li .social-icons a {
   padding: 0;
   padding: 1rem;
 }
@@ -154,7 +152,7 @@ nav .desktop-nav {
 }
 
 .desktop-nav .nav-logo {
-  width: 15%;
+  width: 10rem;
 }
 
 .nav-items {
@@ -197,7 +195,7 @@ nav .social-icons {
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  background-color:rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   margin: 0;
@@ -324,7 +322,7 @@ nav .social-icons {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:var(--light-blue);
+  background-color: var(--light-blue);
   gap: 2rem;
   height: 100%;
   padding: 2rem;
@@ -353,7 +351,7 @@ nav .social-icons {
 }
 
 .info::before {
-  content: '';
+  content: "";
   background-image: url(../assets/bridge.jpg);
   background-position: left;
   background-repeat: no-repeat;
@@ -386,7 +384,7 @@ nav .social-icons {
 }
 
 .info-content .text-box::before {
-  content: 'Get training to be proactive!';
+  content: "Get training to be proactive!";
   position: absolute;
   top: -5.5rem;
   left: 0;
@@ -438,12 +436,11 @@ nav .social-icons {
 }
 
 .cta-content h1::after {
-  content: '';
+  content: "";
   background-color: var(--orange-clr);
   position: absolute;
   left: 0;
   right: 0;
-
 }
 
 .cta-content img {
@@ -533,14 +530,15 @@ nav .social-icons {
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 .contact-container h2 {
   font-size: var(--fs-subheading);
 }
 
-.contact-container .first-line, .contact-container .second-line {
+.contact-container .first-line,
+.contact-container .second-line {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -621,7 +619,7 @@ footer p {
     --fs-sm: 0.8rem;
     --fs-reg: 1rem;
     --fs-lg: 1.5rem;
-  
+
     --fs-heading: 3rem;
     --fs-subheading: 2.5rem;
   }
@@ -646,7 +644,8 @@ footer p {
   /*home*/
   .home {
     align-items: end;
-    background-image: url(../assets/home-hero-img.svg), url(../assets/home-hero-sub-img.svg);
+    background-image: url(../assets/home-hero-img.svg),
+      url(../assets/home-hero-sub-img.svg);
     background-position: bottom left, bottom right;
     background-repeat: no-repeat, no-repeat;
     background-size: 40vw, 30vw;
@@ -666,7 +665,7 @@ footer p {
     width: 40rem;
     height: 25rem;
   }
-  
+
   .about p {
     font-size: 2rem;
   }
@@ -705,10 +704,10 @@ footer p {
     width: 90vw;
   }
 
-  .contact-container .first-line, .contact-container .second-line {
+  .contact-container .first-line,
+  .contact-container .second-line {
     justify-content: flex-start;
   }
-
 }
 
 @media (min-width: 62.5rem) {

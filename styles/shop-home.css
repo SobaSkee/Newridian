@@ -59,18 +59,21 @@ nav {
 nav .mobile-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   z-index: 1100;
+  /* position: relative; */
 }
 
-.mobile-nav .nav-logo {
+.mobile-nav .nav-logo img {
   width: 10rem;
 }
 
 .mobile-nav #open-icon {
+  position: absolute;
+  left: 2rem;
   padding: 1rem;
-  width: 3.5rem;
+  width: 4rem;
   border: 2px solid transparent;
   cursor: pointer;
 }
@@ -157,9 +160,15 @@ nav .social-icons {
 
 /*#endregion navbar styles*/
 
+body .page-title {
+  margin: 6rem 0 2rem 0;
+  color: var(--orange-clr);
+  padding: 2rem;
+  font-size: var(--fs-heading);
+}
+
 /*#region title styles*/
 .title {
-  margin-top: 8rem;
   width: 90vw;
   display: flex;
   flex-direction: column;
