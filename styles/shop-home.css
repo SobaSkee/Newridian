@@ -1,0 +1,265 @@
+/*#region default styles*/
+
+:root {
+  /*font-sizes*/
+  --fs-sm: 0.8rem;
+  --fs-reg: 1rem;
+  --fs-lg: 1.5rem;
+
+  --fs-heading: 2.5rem;
+  --fs-subheading: 2rem;
+
+  /*colors*/
+  --orange-clr: rgb(239, 149, 57);
+  --dark-blue: rgb(10, 26, 52);
+  --light-blue: rgb(22, 44, 81);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--dark-blue);
+}
+
+section {
+  min-height: 100vh;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark-blue);
+}
+/*#endregion default styles*/
+
+/*#region navbar styles*/
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 5rem;
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+nav .mobile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1100;
+}
+
+.mobile-nav .nav-logo {
+  width: 15rem;
+}
+
+.mobile-nav #open-icon {
+  padding: 1rem;
+  width: 3.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.mobile-nav #user-icon {
+  /* padding: 1rem; */
+  height: 100%;
+  padding: 1rem;
+}
+
+#user-icon img {
+  width: 1.5rem;
+}
+.mobile-nav .overlay {
+  display: none;
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.mobile-nav .sidebar {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-left: 2rem; */
+}
+
+.sidebar .nav-item:not(.sidebar > :last-child):hover {
+  background-color: rgba(56, 53, 53, 0.2);
+}
+
+.sidebar button {
+  background-color: none;
+}
+
+.sidebar #social-icons-li {
+  margin-top: 2rem;
+  background-color: rgba(56, 53, 53, 0.2);
+  width: 100%;
+}
+
+#social-icons-li .social-icons a {
+  padding: 0;
+  padding: 1rem;
+}
+
+.nav-item a {
+  font-size: var(--fs-reg);
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+nav .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*#endregion navbar styles*/
+
+/*#region title styles*/
+.title {
+  margin-top: 8rem;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--light-blue);
+}
+
+.title .img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  flex: 2;
+  overflow: hidden;
+}
+
+.img-wrapper .store-img {
+  width: 100%;
+  transition: opacity 400ms ease, scale 400ms ease;
+}
+
+.title .img-wrapper:hover .store-img {
+  scale: 1.02;
+  opacity: 60%;
+}
+
+.img-wrapper .link-img {
+  display: none;
+  position: absolute;
+  width: 2rem;
+}
+
+.title .content-wrapper {
+  width: 100%;
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content-wrapper h1 {
+  color: white;
+  font-size: var(--fs-lg);
+  text-align: center;
+}
+
+.content-wrapper .shop-btn {
+  background-color: var(--orange-clr);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  border-radius: 0.5rem;
+}
+
+/*#endregion title styles*/
+
+body h2 {
+  color: white;
+  margin: 4rem 0rem 4rem 0;
+}
+
+/*#region slide1 styles*/
+.slide-1 {
+  background-image: url(../assets/shop-assets/slide-1-hardhat.jpg);
+  background-size: cover;
+  color: white;
+  background-position: center;
+}
+
+/*#endregion slide1 styles*/
+
+/*#region media queries*/
+@media (min-width: 45rem) {
+  /*nav*/
+  .mobile-nav .sidebar {
+    width: 50vw;
+  }
+
+  /*title*/
+  .title {
+    flex-direction: row;
+    max-width: 64rem;
+  }
+}
+@media (min-width: 62.5rem) {
+  .title .content-wrapper {
+    padding: 4rem;
+  }
+  .title .content-wrapper h1 {
+    font-size: var(--fs-subheading);
+  }
+}
+/*#endregion media queries*/

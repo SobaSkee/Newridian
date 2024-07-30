@@ -28,6 +28,7 @@
 
 section {
   min-height: 100vh;
+  overflow-x: hidden;
   /* border: 5px solid black; */
 }
 
@@ -588,7 +589,7 @@ footer p {
 /*#endregion footer styles*/
 
 /*#region media queries*/
-@media (min-width: 650px) {
+@media (min-width: 40.625rem) {
   /*nav*/
   .mobile-nav .sidebar {
     width: 50vw;
@@ -613,7 +614,7 @@ footer p {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50rem) {
   /*root*/
   :root {
     /*font-sizes*/
@@ -710,7 +711,7 @@ footer p {
 
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 62.5rem) {
   .about .video-container {
     width: 50rem;
     height: 30rem;

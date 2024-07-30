@@ -1,12 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Newridian Shop</title>
-</head>
-<body>
-  <h1>Hi there this is the shop</h1>
-  <p>bruh</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newridian Shop</title>
+    <link rel="stylesheet" href="./styles/shop-home.css" />
+  </head>
+  <body>
+    <!--nav -->
+    <nav>
+      <div class="mobile-nav">
+        <div class="overlay" onclick="toggleNav()"></div>
+        <svg
+          id="open-icon"
+          onclick="toggleNav()"
+          onmouseenter="changeColor()"
+          onmouseleave="revertColor()"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="black"
+        >
+          <path
+            id="menu-icon-path"
+            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+          />
+        </svg>
+        <img
+          class="nav-logo"
+          src="./assets/shop-assets/shop-icons/nav-logo.svg"
+          alt="navbar logo"
+        />
+
+        <!--this is going to link to the sign in page-->
+        <a href="" id="user-icon"
+          ><img
+            src="./assets/shop-assets/shop-icons/user-icon.svg"
+            alt="user icon"
+        /></a>
+
+        <ul class="sidebar">
+          <li class="nav-item">
+            <a href="./shop.html">
+              <p>SHOP</p>
+              <img
+                src="./assets/icons/cart-icon.svg"
+                alt="cart icon"
+                width="30px"
+                height="30px"
+              />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./shop.html">
+              <p>BLOG</p>
+              <img
+                src="./assets/icons/blog-icon.svg"
+                alt="blog icon"
+                width="30px"
+                height="30px"
+              />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./shop.html">
+              <p>BOOKINGS</p>
+              <img
+                src="./assets/icons/calendar-icon.svg"
+                alt="calendar icon"
+                width="30px"
+                height="30px"
+              />
+            </a>
+          </li>
+          <li class="nav-item" id="social-icons-li">
+            <div class="social-icons">
+              <a href=""
+                ><img src="./assets/icons/youtube-icon.svg" alt=""
+              /></a>
+              <a href=""
+                ><img src="./assets/icons/facebook-icon.svg" alt=""
+              /></a>
+              <a href=""
+                ><img src="./assets/icons/instagram-icon.svg" alt=""
+              /></a>
+              <a href=""><img src="./assets/icons/linked-icon.svg" alt="" /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="title">
+      <a class="img-wrapper" href=""
+        ><img
+          onmouseover="linkIconAppear()"
+          onmouseleave="linkIconDisappear()"
+          class="store-img"
+          src="./assets/shop-assets/newridian-amazon-storefront.png"
+          alt="shop storefront image" />
+        <img
+          class="link-img"
+          src="./assets/shop-assets/shop-icons/external-link-icon.svg"
+          alt="external link icon"
+      /></a>
+      <div class="content-wrapper">
+        <h1>Get our products on the Amazon storefront!</h1>
+        <a class="shop-btn" href="">Shop now on Amazon</a>
+      </div>
+    </div>
+    <h2>Featured Products</h2>
+    <section class="slide-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestiae eum
+      rem libero quasi commodi quaerat molestias voluptatibus eaque qui quam
+      atque fuga inventore vero hic vel rerum sed officiis, est voluptas ut
+      nobis mollitia alias. Provident in aut voluptas dolorum? Provident itaque,
+      deserunt possimus necessitatibus quod ipsa excepturi doloribus.
+    </section>
+
+    <script src="./js/shop-home.js"></script>
+  </body>
 </html>
